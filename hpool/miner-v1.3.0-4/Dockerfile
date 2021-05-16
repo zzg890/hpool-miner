@@ -10,6 +10,7 @@ COPY arch.sh /tmp/arch.sh
 
  RUN apk --no-cache add bash tzdata \
  && mkdir -p /tmp/linux \
+ && chmod u+x /tmp/arch.sh ${VER} \
  && /tmp/arch.sh ${VER} \
  && mv /tmp/linux/* /opt/ \
  && cp /usr/share/zoneinfo/$TZ /etc/localtime \
