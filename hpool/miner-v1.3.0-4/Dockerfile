@@ -1,7 +1,7 @@
 FROM --platform=linux/amd64 alpine:3.12 as builder
 
 ARG VER=v1.3.0-4
-ARG TARGETARCH
+ARG TARGETARCH=amd64
 ARG ARCH
 ENV PATH=$PATH:/opt
 ENV TZ=Asia/Shanghai
